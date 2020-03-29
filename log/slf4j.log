@@ -1,0 +1,6 @@
+2020-03-28 17:16:21.309 [com.learn.log.Main.main()] INFO  com.learn.log.TestSlf4j - level: info
+2020-03-28 17:16:21.311 [com.learn.log.Main.main()] WARN  com.learn.log.TestSlf4j - level: warn
+2020-03-28 17:16:21.311 [com.learn.log.Main.main()] ERROR com.learn.log.TestSlf4j - level: error
+2020-03-29 10:51:26.245 [main] INFO  com.learn.log.TestSlf4j - level: info
+2020-03-29 10:51:26.249 [main] WARN  com.learn.log.TestSlf4j - level: warn
+2020-03-29 10:51:26.250 [main] ERROR com.learn.log.TestSlf4j - level: error

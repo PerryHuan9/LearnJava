@@ -1,0 +1,18 @@
+2020-03-28 16:58:20.490 [com.learn.log.Main.main()] ERROR com.learn.log.TestCommonsLogging
+level: error
+
+2020-03-28 16:58:20.491 [com.learn.log.Main.main()] FATAL com.learn.log.TestCommonsLogging
+level: fatal
+
+2020-03-28 17:09:12.155 [com.learn.log.Main.main()] ERROR com.learn.log.TestCommonsLogging
+level: error
+
+2020-03-28 17:09:12.156 [com.learn.log.Main.main()] FATAL com.learn.log.TestCommonsLogging
+level: fatal
+
+2020-03-28 17:16:21.205 [com.learn.log.Main.main()] ERROR com.learn.log.TestCommonsLogging
+level: error
+
+2020-03-28 17:16:21.206 [com.learn.log.Main.main()] FATAL com.learn.log.TestCommonsLogging
+level: fatal
+
