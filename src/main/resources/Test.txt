@@ -1,0 +1,60 @@
+
+    output.close();
+}
+每次写入一个字节非常麻烦，更常见的方法是一次性写入若干字节。这时，可以用OutputStream提供的重载方法void write(byte[])来实现：
+
+public void writeFile() throws IOException {
+    OutputStream output = new FileOutputStream("out/readme.txt");
+    output.write("Hello".getBytes("UTF-8")); // Hello
+    output.close();
+}
+和InputStream一样，上述代码没有考虑到在发生异常的情况下如何正确地关闭资源。写入过程也会经常发生IO错误，例如，磁盘已满，无权限写入等等。我们需要用try(resource)来保证OutputStream在无论是否发生IO错误的时候都能够正确地关闭：
+
+public void writeFile() throws IOException {
+    try (OutputStream output = new FileOutputStream("out/readme.txt")) {
+        output.write("Hello".getBytes("UTF-8")); // Hello
+    } // 编译器在此自动为我们写入finally并调用close()
+}
+阻塞
+和InputStream一样，OutputStream的write()方法也是阻塞的。
+
+OutputStream实现类
+用FileOutputStream可以从文件获取输出流，这是OutputStream常用的一个实现类。此外，ByteArrayOutputStream可以在内存中模拟一个OutputStream：
+
+import java.io.*;
+public class Main {
+    public static void main(String[] args) throws IOException {
+        byte[] data;
+        try (ByteArrayOutputStream output = new ByteArrayOutputStream()) {
+            output.write("Hello ".getBytes("UTF-8"));
+            output.write("world!".getBytes("UTF-8"));
+            data = output.toByteArray();
+        }
+        System.out.println(new String(data, "UTF-8"));
+    }
+}
+
+ Run
+ByteArrayOutputStream实际上是把一个byte[]数组在内存中变成一个OutputStream，虽然实际应用不多，但测试的时候，可以用它来构造一个OutputStream。
+
+练习
+请利用InputStream和OutputStream，编写一个复制文件的程序，它可以带参数运行：
+
+java CopyFile.java source.txt copy.txt
+从下载练习：CopyFile练习 （推荐使用IDE练习插件快速下载）
+
+小结
+Java标准库的java.io.OutputStream定义了所有输出流的超类：
+
+FileOutputStream实现了文件流输出；
+
+ByteArrayOutputStream在内存中模拟一个字节流输出。
+
+某些情况下需要手动调用OutputStream的flush()方法来强制输出缓冲区。
+
+总是使用try(resource)来保证OutputStream正确关闭。我是FileOutputStream写入的内容我是FileOutputStream写入的内容我是FileOutputStream写入的内容我是FileOutputStream写入的内容
+我是FileOutputStream写入的内容
+我是FileOutputStream写入的内容
+我是FileOutputStream写入的内容
+我是FileOutputStream写入的内容
+我是FileOutputStream写入的内容
