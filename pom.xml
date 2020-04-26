@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
@@ -19,31 +19,43 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.16</version>
-            <scope>runtime</scope>
         </dependency>
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+            <version>3.4.6</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.12</version>
+            <scope>provided</scope>
+        </dependency>
+
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
             <version>5.6.1</version>
             <scope>test</scope>
         </dependency>
+
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
             <version>1.2.3</version>
         </dependency>
+
         <dependency>
             <groupId>commons-logging</groupId>
             <artifactId>commons-logging-api</artifactId>
             <version>1.1</version>
         </dependency>
-
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-jcl</artifactId>
             <version>2.13.1</version>
         </dependency>
-
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-core</artifactId>
@@ -54,7 +66,6 @@
             <artifactId>log4j-jcl</artifactId>
             <version>2.13.1</version>
         </dependency>
-
 
     </dependencies>
     <build>
@@ -85,21 +96,21 @@
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>1.1.1</version>
-<!--                <executions>-->
-<!--                    <execution>-->
-<!--                        <phase>test</phase>-->
-<!--                        <goals>-->
-<!--                            <goal>java</goal>-->
-<!--                        </goals>-->
-<!--                        <configuration>-->
-<!--                            <mainClass>com.learn.date.Main</mainClass>-->
-<!--                            <arguments>-->
-<!--                                <argument>arg0</argument>-->
-<!--                                <argument>arg1</argument>-->
-<!--                            </arguments>-->
-<!--                        </configuration>-->
-<!--                    </execution>-->
-<!--                </executions>-->
+                <!--                <executions>-->
+                <!--                    <execution>-->
+                <!--                        <phase>test</phase>-->
+                <!--                        <goals>-->
+                <!--                            <goal>java</goal>-->
+                <!--                        </goals>-->
+                <!--                        <configuration>-->
+                <!--                            <mainClass>com.learn.date.Main</mainClass>-->
+                <!--                            <arguments>-->
+                <!--                                <argument>arg0</argument>-->
+                <!--                                <argument>arg1</argument>-->
+                <!--                            </arguments>-->
+                <!--                        </configuration>-->
+                <!--                    </execution>-->
+                <!--                </executions>-->
             </plugin>
 
             <plugin>

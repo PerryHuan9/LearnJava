@@ -1,8 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.learn.junit.UserTest
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.787 s <<< FAILURE! - in com.learn.junit.UserTest
-testAddUser  Time elapsed: 0.135 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
-	at com.learn.junit.UserTest.testAddUser(UserTest.java:33)
-
