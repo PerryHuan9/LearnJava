@@ -1,6 +1,7 @@
 com/learn/mybatis/StudentDaoTest.class
 com/learn/junit/UserTest.class
 com/learn/junit/ThrowTest.class
+com/learn/mybatis/ArticleDaoTest.class
 com/learn/junit/UtilsTest.class
 com/learn/junit/FactorialTest.class
 com/learn/mybatis/UserDaoTest.class

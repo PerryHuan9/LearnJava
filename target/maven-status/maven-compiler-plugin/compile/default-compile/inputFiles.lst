@@ -1,4 +1,5 @@
 /Users/huangyilin/Desktop/JavaProjects/LearnJava/src/main/java/com/learn/date/Main.java
+/Users/huangyilin/Desktop/JavaProjects/LearnJava/src/main/java/com/learn/mybatis/dao/ArticleDao.java
 /Users/huangyilin/Desktop/JavaProjects/LearnJava/src/main/java/com/learn/exception/Main.java
 /Users/huangyilin/Desktop/JavaProjects/LearnJava/src/main/java/com/learn/collection/Main.java
 /Users/huangyilin/Desktop/JavaProjects/LearnJava/src/main/java/com/learn/functional/TestStream.java
@@ -24,6 +25,7 @@
 /Users/huangyilin/Desktop/JavaProjects/LearnJava/src/main/java/com/learn/jdbc/Main.java
 /Users/huangyilin/Desktop/JavaProjects/LearnJava/src/main/java/com/learn/generic/Main.java
 /Users/huangyilin/Desktop/JavaProjects/LearnJava/src/main/java/com/learn/base/TestUtils.java
+/Users/huangyilin/Desktop/JavaProjects/LearnJava/src/main/java/com/learn/mybatis/bean/Article.java
 /Users/huangyilin/Desktop/JavaProjects/LearnJava/src/main/java/com/learn/reflection/Main.java
 /Users/huangyilin/Desktop/JavaProjects/LearnJava/src/main/java/com/learn/collection/TestSet.java
 /Users/huangyilin/Desktop/JavaProjects/LearnJava/src/main/java/com/learn/date/TestLocalDate.java

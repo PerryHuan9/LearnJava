@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.learn.mybatis.dao.ArticleDao">
+    <insert id="insertArticle" parameterType="Article" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO articles(title, author, publish_date, article_type)
+            VALUES (#{title}, #{author}, #{publishDate}, #{articleType});
+    </insert>
+
+    <sql id="select_article">
+         SELECT
+            id,
+            title,
+            author,
+            publish_date as publishDate,
+            article_type as articleType
+        FROM articles
+    </sql>
+
+    <select id="selectArticle" resultType="Article">
+        <include refid="select_article"></include>
+        WHERE id = #{id}
+    </select>
+
+    <!--    ${} 为不转义参数，即不会使用PreparedStatement 参数占位符-->
+    <select id="selectArticleByKey" resultType="Article">
+        <include refid="select_article"></include>
+        WHERE ${key}=#{value}
+    </select>
+
+    <select id="selectArticles" resultType="Article">
+        <include refid="select_article"></include>
+    </select>
+
+    <select id="selectLikeTitleArticles" resultType="com.learn.mybatis.bean.Article">
+        <include refid="select_article"></include>
+        WHERE title LIKE #{keyword}
+    </select>
+
+    <update id="updateArticle" parameterType="Article">
+        UPDATE articles SET
+            title = #{title},
+            author = #{author},
+            article_type = #{articleType}
+        WHERE id = #{id}
+    </update>
+
+    <update id="updateArticleField" parameterType="Article">
+        UPDATE articles SET
+        <if test="title!=null">
+            title = #{title}
+        </if>
+        <if test="author!=null">
+            ,author = #{author}
+        </if>
+        <if test="articleType!=null">
+            ,article_type = #{articleType}
+        </if>
+        WHERE id = #{id}
+    </update>
+
+    <delete id="deleteArticle">
+        DELETE FROM articles WHERE id = #{id}
+    </delete>
+</mapper>

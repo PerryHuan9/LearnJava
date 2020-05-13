@@ -37,6 +37,7 @@ com/learn/thread/ThreadSync$2.class
 com/learn/thread/MyThread.class
 com/learn/exception/Main.class
 com/learn/base/TestBeanAndEnum.class
+com/learn/mybatis/dao/ArticleDao.class
 com/learn/reflection/Main.class
 com/learn/base/TestProcessControl$My$Hello2.class
 com/learn/io/TestOutputStream.class
@@ -49,6 +50,7 @@ com/learn/functional/TestLambda.class
 com/learn/mybatis/Main.class
 com/learn/mybatis/dao/StudentDao.class
 com/learn/junit/Calculator.class
+com/learn/mybatis/bean/Article.class
 com/learn/reflection/TestClass.class
 com/learn/io/TestReadResources.class
 com/learn/base/TestBase.class
